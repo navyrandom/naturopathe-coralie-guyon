@@ -3,6 +3,38 @@ import CardHeader from "@material-ui/core/CardHeader";
 import "./all.css";
 import { Divider } from "@material-ui/core";
 
+const descriptions = [
+  {
+    title: "Troubles génito-urinaires",
+    subheader:
+      "Aménorrhée, dysménorrhée, cystite, mycose génitale, pertes génitales, ...",
+  },
+  {
+    title: "Troubles ostéo-articulaires",
+    subheader:
+      "Tendinite, goutte, arthrose, polyarthrite rhumatoïde, ostéoporose, spondylarthrite ankylosante, fibromyalgie, ...",
+  },
+  {
+    title: "Troubles ORL",
+    subheader:
+      "Nez encombré, bronchite chronique, angine et amygdalite à répétition, sinusite, otite, ...",
+  },
+  {
+    title: "Troubles digestifs",
+    subheader:
+      "Ballonnements, constipation, diarrhée, difficulté à digérer, reflux gastriques, ulcère, gastrite, colopathie fonctionnelle, maladie de Crohn, rectocolite hémorragique, ...",
+  },
+  {
+    title: "Troubles de la peau",
+    subheader: "Acné, psoriasis, eczéma, herpès, mycoses, ..",
+  },
+  {
+    title: "Ainsi que:",
+    subheader:
+      "Volonté de perte ou prise de poids, fatigue chronique, stress, dépression, insomnie, problèmes circulatoires, hémorroïdes, ...",
+  },
+];
+
 export default function Description(props) {
   return (
     <div>
@@ -25,6 +57,7 @@ export default function Description(props) {
           par revenir puisque l'on n'a rien changé a son nid douillet.
         </p>
       </div>
+
       <div className="description2">
         <h2>Pourquoi consulter une naturopathe?</h2>
         <Divider />
@@ -36,45 +69,14 @@ export default function Description(props) {
         </p>
         <div className="sixreasons">
           <div className="bigcard">
-            <span className="smallcard">
-              <CardHeader
-                title="Troubles génito-urinaires"
-                subheader="Aménorrhée, dysménorrhée, cystite, mycose génitale, pertes génitales, ..."
-              />
-            </span>
-            <span className="smallcard">
-              <CardHeader
-                title="Troubles ostéo-articulaires "
-                subheader="Troubles ostéo-articulaires 
-    Tendinite, goutte, arthrose, polyarthrite rhumatoïde, ostéoporose, spondylarthrite ankylosante, fibromyalgie, ..."
-              />
-            </span>
-            <span className="smallcard">
-              <CardHeader
-                title="Troubles ORL"
-                subheader="Nez encombré, bronchite chronique, angine et amygdalite à répétition, sinusite, otite, ..."
-              />
-            </span>
-          </div>
-          <div className="bigcard">
-            <span className="smallcard">
-              <CardHeader
-                title="Troubles digestifs "
-                subheader="Ballonnements, constipation, diarrhée, difficulté à digérer, reflux gastriques, ulcère, gastrite, colopathie fonctionnelle, maladie de Crohn, rectocolite hémorragique, ..."
-              />
-            </span>
-            <span className="smallcard">
-              <CardHeader
-                title="Troubles de la peau"
-                subheader="Acné, psoriasis, eczéma, herpès, mycoses, ..."
-              />
-            </span>
-            <span className="smallcard">
-              <CardHeader
-                title="Ainsi que:"
-                subheader="Volonté de perte ou prise de poids, fatigue chronique, stress, dépression, insomnie, problèmes circulatoires, hémorroïdes, ..."
-              />
-            </span>
+            {descriptions.map((description) => (
+              <span className="smallcard">
+                <CardHeader
+                  title={description.title}
+                  subheader={description.subheader}
+                />
+              </span>
+            ))}
           </div>
         </div>
       </div>

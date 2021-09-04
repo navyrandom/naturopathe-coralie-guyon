@@ -1,0 +1,68 @@
+
+@media (min-width: 815px){
+    .menubg {
+      display: none;
+    }
+    .navbar a {
+      float: left;
+      display: block;
+      position: sticky;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 20px;
+      margin: 20px;
+      text-decoration: none;
+    }
+    .navbar a:hover {
+      background: rgb(230, 236, 224);
+      color: rgba(66, 117, 65, 0.5);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+    }
+    .navbar {
+      overflow: hidden;
+      position: fixed;
+      top: 0;
+      width: 77.7%;
+      background-color: rgba(29, 100, 15, 0.25);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
+      -webkit-box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
+      color: rgba(21, 22, 21, 0.75);
+    }
+    .main {
+      margin-top: 30px;
+    }
+  }
+  
+ 
+  @media (max-width: 815px) {
+   .menu{
+    position: relative;
+    display: inline-block;
+   }
+  
+   .navbar {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+   }
+   .navbar a{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+   }
+   .navbar a:hover{
+       background-color: aquamarine;
+   }
+   .menu:hover .navbar {
+       display: block;
+   }
+  }
+  
